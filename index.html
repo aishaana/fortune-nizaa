@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fortune Cookie for Nizaa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f4ef;
+      color: #444;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      max-width: 500px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #7a5cfa;
+    }
+    button {
+      background: #7a5cfa;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #654bcb;
+    }
+    .fortune {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #555;
+      min-height: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fortune Cookie untuk Nizaa!</h1>
+    <button onclick="showFortune()">Buka Fortune Cookie</button>
+    <div class="fortune" id="fortune"></div>
+  </div>
+
+  <script>
+    const fortunes = [
+      "hari ini kamu dapat mantra extra semangat buat belajar utbk",
+      "kamu dapat 1 hari bebas overthinking, manfaatin baik baik yya",
+      "ada orang yang bangga banget sama kamu. spoiler: ga cuma satu (tapi salah satunya namanya aisya)",
+      "kalau kamu capek tidur bentar gadosa",
+      "kamu dapat perlindungan dari vibes jelek dan orang yang bikin stres ; *tips biar ini manjur tiap liat orang kaya gitu anggap aja pulu pulu",
+      "warning : jangan lupa minum air, tydak boleh dehidrasi biar kuat menghadapi dunia",
+      "kamu udah jauh lebih kuat dan keren dari kemaren kemaren",
+      "jangan lupa jaga kesehatann, supaya gasering mimisan dan demam",
+      "walaupun mager banget kamu harus lebih rajin olahraga biar jadi generasi emas indonesia💪",
+      "kalau pengen cerita ingat ada aisya (kaya slogan😼)",
+      "kamu jadi lebih cantik kalau senyum, jadi harus banyak senyum okee",
+      "jangan lupa ketawa dan bahagia teruss",
+      "ingat selalu ada aisya caca dan caca yang akan dukung kamu",
+      "utbk besok bakal easy inshaAllah (aamiin)",
+      "love u 3000",
+      "ini cokelat buat kamu 🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫🍫 (ada 19 cokelat tapi kamu gausah itung)",
+      "🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟 (ada 19 bintang jugaa)",
+      "🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂🫂 (19 warms hug)",
+      "👟👢🎒🌂💍🥿👠👚👕👖🚁🛵🚗✈️🏡💻⌚📷⏰ (19 gifts)"
+    ];
+
+    function showFortune() {
+      const randomIndex = Math.floor(Math.random() * fortunes.length);
+      document.getElementById('fortune').textContent = fortunes[randomIndex];
+    }
+  </script>
+</body>
+</html>
